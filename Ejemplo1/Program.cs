@@ -20,15 +20,63 @@ namespace Ejemplo1
              * 6. mostrar resultado
              * 
              * Ejemplo de ejecución:
-             * PM>Ejemplo1 -n1 30 -operación resta -n2 4
+             * PM> Ejemplo1 -n1 30 -operación resta -n2 4
              */
 
             //Paso 1: Esta en args
             //Paso 2: iteraciones
             int longitud = args.Length;// 6
+            string operacion = "";
             //hablar sobre iteraciones (loops)
+            for (int i = 0; i < longitud; i++) {
+                string argumento = args[i];
+                if (argumento.Equals("-operacion")) {
+                    operacion = args[i + 1];
+                    break;
+                }
+            }
+            if (operacion.Equals(""))
+            {
+                Console.WriteLine("No se encontro el argumento -operacion; revise el manual de usuario");
+            }
+            else {
+                int resultado = 0, n1 = 0,n2 = 0;
 
-
+                for (int i = 0; i < longitud; i++)
+                {
+                    if (args[i].Equals("-n1"))
+                    {
+                        n1 = int.Parse(args[i + 1]);
+                    }
+                    if (args[i].Equals("-n2"))
+                    {
+                        n2 = int.Parse(args[i + 1]);
+                    }
+                }
+                switch (operacion) {
+                    case "suma":
+                        resultado = n1 + n2;
+                        break;
+                    case "resta":
+                        resultado = n1 - n2;
+                        break;
+                    case "multiplicacion":
+                        resultado = n1 * n2;
+                        break;
+                    case "division":
+                        resultado = n1 / n2;
+                        break;
+                    default:
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.BackgroundColor = ConsoleColor.DarkBlue;
+                        Console.WriteLine($"Error, operacion aritmetica no contemplada: {operacion}");
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.BackgroundColor = ConsoleColor.Black;
+                        resultado = -9999;
+                        break;
+                }
+                Console.WriteLine($"El resultado de la {operacion} es: {resultado}");
+            }
 
             int num, num2;
             num = 45;
