@@ -119,6 +119,41 @@ namespace Ejemplo1
             Console.WriteLine(
                 $"Distancia: {distancia}[m]\nAltura: {altura}\nAncho: {ancho}"
             );
+
+            // Una iteracion con while
+            Console.WriteLine("Por favor ingrese un numero entero");
+            int contador;
+            string lineaLeida = Console.ReadLine();
+            bool convertido = int.TryParse(lineaLeida, out contador);//contador = int.Parse(lineaLeida);
+            if (convertido)
+            {
+                while (contador > 0)
+                {
+                    Console.WriteLine("Estoy dentro una iteracion");
+                    contador--;
+                }
+            }
+            else {
+                Console.WriteLine($"El valor \"{lineaLeida}\" no es un numero valido.");
+            }
+
+            //Intentos indefinidos
+            Console.WriteLine("Por favor ingrese un numero entero");
+            lineaLeida = Console.ReadLine();
+            convertido = int.TryParse(lineaLeida, out contador);
+            while (!convertido) {
+                Console.WriteLine("Por favor ingrese un numero entero");
+                lineaLeida = Console.ReadLine();
+                convertido = int.TryParse(lineaLeida, out contador);
+            }
+            if (convertido)
+            {
+                while (contador > 0)
+                {
+                    Console.WriteLine("Estoy dentro una iteracion");
+                    contador--;
+                }
+            }
         }
     }
 }
