@@ -1,3 +1,5 @@
+using Ejemplo2.MisClases;
+
 namespace Ejemplo2
 {
     public partial class Form1 : Form
@@ -45,7 +47,7 @@ namespace Ejemplo2
                 resultado.Text = res.ToString();
             }
         }
-
+        #region Dos metodos simples
         private void button3_Click(object sender, EventArgs e)
         {
             string n1 = num1.Text;
@@ -58,5 +60,20 @@ namespace Ejemplo2
                 resultado.Text = res.ToString();
             }
         }
+        
+        private void VaciarCampos(object sender, EventArgs e)
+        {
+            num1.Text = num2.Text = "";
+            //Ejemplos simpres
+            Empleado em1 = new Empleado("Sofia","Rocha",73012345);
+            em1.metodo1(22, "Pepe");
+            em1.metodo1("Pepe", "Perales");
+            em1.telefono = 20;
+            Empleado em2 = new Empleado("Ana", "Sosa");
+        }
+
+        #endregion
+
+
     }
 }

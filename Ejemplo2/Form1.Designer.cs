@@ -50,6 +50,7 @@
             label3 = new Label();
             label1 = new Label();
             tabPage1 = new TabPage();
+            button6 = new Button();
             tabControl1.SuspendLayout();
             tab1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -80,6 +81,7 @@
             // 
             // groupBox2
             // 
+            groupBox2.Controls.Add(button6);
             groupBox2.Controls.Add(button5);
             groupBox2.Controls.Add(button3);
             groupBox2.Controls.Add(button4);
@@ -274,6 +276,16 @@
             tabPage1.Text = "tabPage1";
             tabPage1.UseVisualStyleBackColor = true;
             // 
+            // button6
+            // 
+            button6.Location = new Point(102, 86);
+            button6.Name = "button6";
+            button6.Size = new Size(57, 23);
+            button6.TabIndex = 6;
+            button6.Text = "VACIAR";
+            button6.UseVisualStyleBackColor = true;
+            button6.Click += VaciarCampos;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -315,5 +327,6 @@
         private Label label9;
         private TextBox num1;
         private Label label8;
+        private Button button6;
     }
 }
