@@ -30,11 +30,37 @@ namespace Ejemplo2.MisClases
 
 
         public string nombre;
-        public string apellido;
-        public int telefono { get; set; }//variantes completas de get/set
+        public string apellido { get; set; }//variantes completas de get/set
+        private int _telefono;
+        public int telefono { 
+            get {
+                return _telefono * 2;
+            }
+            set {
+                if(value > 0)
+                    _telefono = value;
+            }
+        }
 
         public void metodo2() { 
         
+        }
+    }
+
+    public class Jefe : Empleado{
+        public Jefe(string nombre1, string apellido1, string placa, string depto) : base(nombre1, apellido1){
+            this.placa = placa;
+            departamento = depto;
+        }
+
+        public Jefe() : base("NN","NA"){
+            placa = "0000";
+            departamento = "";
+        }
+        public string placa;
+        public string departamento;
+        public string ordenar() {
+            return "Entregue esos informes.";
         }
     }
 }

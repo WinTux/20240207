@@ -69,7 +69,22 @@ namespace Ejemplo2
             em1.metodo1(22, "Pepe");
             em1.metodo1("Pepe", "Perales");
             em1.telefono = 20;
+            int telefonoMultiplicado = em1.telefono;
             Empleado em2 = new Empleado("Ana", "Sosa");
+            em2.metodo1();
+            
+
+            Jefe jefe_depto_1 = new Jefe("Samantha", "Roca", "5432CBA", "Recursos Humanos");
+            jefe_depto_1.metodo1();
+            jefe_depto_1.ordenar();
+
+            float num = 7;
+            int num2 = (int)5.7f;
+            float num3 = num2;
+
+            Empleado em3 = new Jefe("Pepe", "Perales", "78945ASD", "Mantenimiento");
+            Jefe jj = (Jefe)em2;
+            jj.ordenar();
         }
 
         #endregion
