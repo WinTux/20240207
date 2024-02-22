@@ -31,6 +31,7 @@
             tabControl1 = new TabControl();
             tab1 = new TabPage();
             groupBox2 = new GroupBox();
+            button6 = new Button();
             button5 = new Button();
             button3 = new Button();
             button4 = new Button();
@@ -50,17 +51,37 @@
             label3 = new Label();
             label1 = new Label();
             tabPage1 = new TabPage();
-            button6 = new Button();
+            groupBox3 = new GroupBox();
+            lblColorCirc = new Label();
+            lblAreaCirc = new Label();
+            label16 = new Label();
+            label15 = new Label();
+            button8 = new Button();
+            txtRadio = new TextBox();
+            label14 = new Label();
+            lblColor = new Label();
+            label13 = new Label();
+            lblArea = new Label();
+            label12 = new Label();
+            button7 = new Button();
+            txtBase = new TextBox();
+            txtAltura = new TextBox();
+            label11 = new Label();
+            label10 = new Label();
+            tabPage2 = new TabPage();
             tabControl1.SuspendLayout();
             tab1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox1.SuspendLayout();
+            tabPage1.SuspendLayout();
+            groupBox3.SuspendLayout();
             SuspendLayout();
             // 
             // tabControl1
             // 
             tabControl1.Controls.Add(tab1);
             tabControl1.Controls.Add(tabPage1);
+            tabControl1.Controls.Add(tabPage2);
             tabControl1.Location = new Point(3, 1);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
@@ -98,6 +119,16 @@
             groupBox2.TabIndex = 1;
             groupBox2.TabStop = false;
             groupBox2.Text = "Operaciones";
+            // 
+            // button6
+            // 
+            button6.Location = new Point(102, 86);
+            button6.Name = "button6";
+            button6.Size = new Size(57, 23);
+            button6.TabIndex = 6;
+            button6.Text = "VACIAR";
+            button6.UseVisualStyleBackColor = true;
+            button6.Click += VaciarCampos;
             // 
             // button5
             // 
@@ -269,22 +300,183 @@
             // 
             // tabPage1
             // 
+            tabPage1.Controls.Add(groupBox3);
+            tabPage1.Controls.Add(lblColor);
+            tabPage1.Controls.Add(label13);
+            tabPage1.Controls.Add(lblArea);
+            tabPage1.Controls.Add(label12);
+            tabPage1.Controls.Add(button7);
+            tabPage1.Controls.Add(txtBase);
+            tabPage1.Controls.Add(txtAltura);
+            tabPage1.Controls.Add(label11);
+            tabPage1.Controls.Add(label10);
             tabPage1.Location = new Point(4, 24);
             tabPage1.Name = "tabPage1";
             tabPage1.Size = new Size(623, 419);
             tabPage1.TabIndex = 2;
-            tabPage1.Text = "tabPage1";
+            tabPage1.Text = "Polimorfismo";
             tabPage1.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // groupBox3
             // 
-            button6.Location = new Point(102, 86);
-            button6.Name = "button6";
-            button6.Size = new Size(57, 23);
-            button6.TabIndex = 6;
-            button6.Text = "VACIAR";
-            button6.UseVisualStyleBackColor = true;
-            button6.Click += VaciarCampos;
+            groupBox3.Controls.Add(lblColorCirc);
+            groupBox3.Controls.Add(lblAreaCirc);
+            groupBox3.Controls.Add(label16);
+            groupBox3.Controls.Add(label15);
+            groupBox3.Controls.Add(button8);
+            groupBox3.Controls.Add(txtRadio);
+            groupBox3.Controls.Add(label14);
+            groupBox3.Location = new Point(6, 151);
+            groupBox3.Name = "groupBox3";
+            groupBox3.Size = new Size(319, 113);
+            groupBox3.TabIndex = 9;
+            groupBox3.TabStop = false;
+            groupBox3.Text = "groupBox3";
+            // 
+            // lblColorCirc
+            // 
+            lblColorCirc.AutoSize = true;
+            lblColorCirc.Location = new Point(71, 86);
+            lblColorCirc.Name = "lblColorCirc";
+            lblColorCirc.Size = new Size(0, 15);
+            lblColorCirc.TabIndex = 6;
+            // 
+            // lblAreaCirc
+            // 
+            lblAreaCirc.AutoSize = true;
+            lblAreaCirc.Location = new Point(71, 62);
+            lblAreaCirc.Name = "lblAreaCirc";
+            lblAreaCirc.Size = new Size(0, 15);
+            lblAreaCirc.TabIndex = 5;
+            // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.Location = new Point(12, 86);
+            label16.Name = "label16";
+            label16.Size = new Size(39, 15);
+            label16.TabIndex = 4;
+            label16.Text = "Color:";
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Location = new Point(12, 62);
+            label15.Name = "label15";
+            label15.Size = new Size(34, 15);
+            label15.TabIndex = 3;
+            label15.Text = "Area:";
+            // 
+            // button8
+            // 
+            button8.Location = new Point(198, 26);
+            button8.Name = "button8";
+            button8.Size = new Size(99, 23);
+            button8.TabIndex = 2;
+            button8.Text = "Area circulo";
+            button8.UseVisualStyleBackColor = true;
+            button8.Click += button8_Click;
+            // 
+            // txtRadio
+            // 
+            txtRadio.Location = new Point(71, 26);
+            txtRadio.Name = "txtRadio";
+            txtRadio.Size = new Size(100, 23);
+            txtRadio.TabIndex = 1;
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Location = new Point(12, 29);
+            label14.Name = "label14";
+            label14.Size = new Size(40, 15);
+            label14.TabIndex = 0;
+            label14.Text = "Radio:";
+            // 
+            // lblColor
+            // 
+            lblColor.AutoSize = true;
+            lblColor.Location = new Point(77, 113);
+            lblColor.Name = "lblColor";
+            lblColor.Size = new Size(0, 15);
+            lblColor.TabIndex = 8;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Location = new Point(18, 113);
+            label13.Name = "label13";
+            label13.Size = new Size(39, 15);
+            label13.TabIndex = 7;
+            label13.Text = "Color:";
+            // 
+            // lblArea
+            // 
+            lblArea.AutoSize = true;
+            lblArea.Location = new Point(77, 79);
+            lblArea.Name = "lblArea";
+            lblArea.Size = new Size(0, 15);
+            lblArea.TabIndex = 6;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Location = new Point(18, 79);
+            label12.Name = "label12";
+            label12.Size = new Size(34, 15);
+            label12.TabIndex = 5;
+            label12.Text = "Area:";
+            // 
+            // button7
+            // 
+            button7.Location = new Point(204, 11);
+            button7.Name = "button7";
+            button7.Size = new Size(99, 23);
+            button7.TabIndex = 4;
+            button7.Text = "Area cuadrado";
+            button7.UseVisualStyleBackColor = true;
+            button7.Click += button7_Click;
+            // 
+            // txtBase
+            // 
+            txtBase.Location = new Point(77, 39);
+            txtBase.Name = "txtBase";
+            txtBase.Size = new Size(100, 23);
+            txtBase.TabIndex = 3;
+            // 
+            // txtAltura
+            // 
+            txtAltura.Location = new Point(77, 11);
+            txtAltura.Name = "txtAltura";
+            txtAltura.Size = new Size(100, 23);
+            txtAltura.TabIndex = 2;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Location = new Point(18, 42);
+            label11.Name = "label11";
+            label11.Size = new Size(34, 15);
+            label11.TabIndex = 1;
+            label11.Text = "Base:";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(16, 14);
+            label10.Name = "label10";
+            label10.Size = new Size(42, 15);
+            label10.TabIndex = 0;
+            label10.Text = "Altura:";
+            // 
+            // tabPage2
+            // 
+            tabPage2.Location = new Point(4, 24);
+            tabPage2.Name = "tabPage2";
+            tabPage2.Size = new Size(623, 419);
+            tabPage2.TabIndex = 3;
+            tabPage2.Text = "Estructuras de datos";
+            tabPage2.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -300,6 +492,10 @@
             groupBox2.PerformLayout();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            tabPage1.ResumeLayout(false);
+            tabPage1.PerformLayout();
+            groupBox3.ResumeLayout(false);
+            groupBox3.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -328,5 +524,23 @@
         private TextBox num1;
         private Label label8;
         private Button button6;
+        private TextBox txtBase;
+        private TextBox txtAltura;
+        private Label label11;
+        private Label label10;
+        private Label lblArea;
+        private Label label12;
+        private Button button7;
+        private Label lblColor;
+        private Label label13;
+        private GroupBox groupBox3;
+        private Label lblAreaCirc;
+        private Label label16;
+        private Label label15;
+        private Button button8;
+        private TextBox txtRadio;
+        private Label label14;
+        private Label lblColorCirc;
+        private TabPage tabPage2;
     }
 }
