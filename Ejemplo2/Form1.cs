@@ -4,6 +4,7 @@ namespace Ejemplo2
 {
     public partial class Form1 : Form
     {
+        public List<string> miListita;
         public Form1()
         {
             InitializeComponent();
@@ -96,14 +97,14 @@ namespace Ejemplo2
             lblArea.Text = rect1.calcularArea().ToString();
             lblColor.Text = rect1.getColor();
 
-            
+
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
             IFiguraGeometrica circ1 = new Circulo(double.Parse(txtRadio.Text));
 
-            IFiguraGeometrica[] figuras = { circ1, new Rectangulo(10,40)};
+            IFiguraGeometrica[] figuras = { circ1, new Rectangulo(10, 40) };
             int[] calificaciones = new int[4];
             int[] calificaciones2 = new int[calificaciones.Length + 1];
             for (int j = 0; j < calificaciones.Length; j++)
@@ -114,6 +115,51 @@ namespace Ejemplo2
             {
                 lblColorCirc.Text += figuras[i].calcularArea().ToString() + ", ";
             }
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            if (miListita == null)
+                miListita = new List<string>();
+            miListita.Add(txtGetLista.Text);
+            txtGetLista.Text = "";
+            lblMostrarLista.Text = "";
+
+            miListita.Remove("RRR");
+            for (int i = 0; i < miListita.Count; i++)
+            {
+                lblMostrarLista.Text += miListita.ElementAt(i) + "\n";
+            }
+            string elemento = miListita.First();
+
+        }
+
+        public List<Empleado> listaEmpleados = new List<Empleado>();
+        private void button10_Click(object sender, EventArgs e)
+        {
+            listaEmpleados.Add(new Empleado(txtNombreEmpleado.Text, txtApellidoEmpleado.Text, int.Parse(txtTelefonoEmpleado.Text)));
+            txtNombreEmpleado.Text = txtApellidoEmpleado.Text = txtTelefonoEmpleado.Text = "";
+            lblMostrarListaEmpleados.Text = "";
+            for (int i = 0; i < listaEmpleados.Count; i++)
+            {
+                lblMostrarListaEmpleados.Text += listaEmpleados.ElementAt(i) + "\n";
+            }
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            Empleado empAuxiliar = new Empleado(txtNombreEmpleado.Text, txtApellidoEmpleado.Text, int.Parse(txtTelefonoEmpleado.Text));
+            listaEmpleados.Remove(empAuxiliar);
+            txtNombreEmpleado.Text = txtApellidoEmpleado.Text = txtTelefonoEmpleado.Text = "";
+            lblMostrarListaEmpleados.Text = "";
+            for (int i = 0; i < listaEmpleados.Count; i++)
+            {
+                lblMostrarListaEmpleados.Text += listaEmpleados.ElementAt(i) + "\n";
+            }
+
+            Empleado x = new Empleado("a","b",1);
+            Empleado y = x;
+            x.nombre = "z";
         }
     }
 }

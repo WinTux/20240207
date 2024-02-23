@@ -45,6 +45,10 @@ namespace Ejemplo2.MisClases
         public void metodo2() { 
         
         }
+
+        public override string ToString() {
+            return $"{nombre} {apellido}";
+        }
     }
 
     public class Jefe : Empleado{

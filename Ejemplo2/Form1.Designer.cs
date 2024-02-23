@@ -69,12 +69,28 @@
             label11 = new Label();
             label10 = new Label();
             tabPage2 = new TabPage();
+            groupBox4 = new GroupBox();
+            lblMostrarListaEmpleados = new Label();
+            button10 = new Button();
+            txtTelefonoEmpleado = new TextBox();
+            txtApellidoEmpleado = new TextBox();
+            txtNombreEmpleado = new TextBox();
+            label20 = new Label();
+            label19 = new Label();
+            label18 = new Label();
+            lblMostrarLista = new Label();
+            button9 = new Button();
+            txtGetLista = new TextBox();
+            label17 = new Label();
+            button11 = new Button();
             tabControl1.SuspendLayout();
             tab1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox1.SuspendLayout();
             tabPage1.SuspendLayout();
             groupBox3.SuspendLayout();
+            tabPage2.SuspendLayout();
+            groupBox4.SuspendLayout();
             SuspendLayout();
             // 
             // tabControl1
@@ -471,12 +487,146 @@
             // 
             // tabPage2
             // 
+            tabPage2.Controls.Add(groupBox4);
             tabPage2.Location = new Point(4, 24);
             tabPage2.Name = "tabPage2";
             tabPage2.Size = new Size(623, 419);
             tabPage2.TabIndex = 3;
             tabPage2.Text = "Estructuras de datos";
             tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // groupBox4
+            // 
+            groupBox4.Controls.Add(button11);
+            groupBox4.Controls.Add(lblMostrarListaEmpleados);
+            groupBox4.Controls.Add(button10);
+            groupBox4.Controls.Add(txtTelefonoEmpleado);
+            groupBox4.Controls.Add(txtApellidoEmpleado);
+            groupBox4.Controls.Add(txtNombreEmpleado);
+            groupBox4.Controls.Add(label20);
+            groupBox4.Controls.Add(label19);
+            groupBox4.Controls.Add(label18);
+            groupBox4.Controls.Add(lblMostrarLista);
+            groupBox4.Controls.Add(button9);
+            groupBox4.Controls.Add(txtGetLista);
+            groupBox4.Controls.Add(label17);
+            groupBox4.Location = new Point(11, 11);
+            groupBox4.Name = "groupBox4";
+            groupBox4.Size = new Size(210, 394);
+            groupBox4.TabIndex = 0;
+            groupBox4.TabStop = false;
+            groupBox4.Text = "Listas";
+            // 
+            // lblMostrarListaEmpleados
+            // 
+            lblMostrarListaEmpleados.AutoSize = true;
+            lblMostrarListaEmpleados.Location = new Point(6, 330);
+            lblMostrarListaEmpleados.Name = "lblMostrarListaEmpleados";
+            lblMostrarListaEmpleados.Size = new Size(44, 15);
+            lblMostrarListaEmpleados.TabIndex = 11;
+            lblMostrarListaEmpleados.Text = "label21";
+            // 
+            // button10
+            // 
+            button10.Location = new Point(18, 293);
+            button10.Name = "button10";
+            button10.Size = new Size(115, 23);
+            button10.TabIndex = 10;
+            button10.Text = "Agregar Empleado";
+            button10.UseVisualStyleBackColor = true;
+            button10.Click += button10_Click;
+            // 
+            // txtTelefonoEmpleado
+            // 
+            txtTelefonoEmpleado.Location = new Point(85, 264);
+            txtTelefonoEmpleado.Name = "txtTelefonoEmpleado";
+            txtTelefonoEmpleado.Size = new Size(100, 23);
+            txtTelefonoEmpleado.TabIndex = 9;
+            // 
+            // txtApellidoEmpleado
+            // 
+            txtApellidoEmpleado.Location = new Point(89, 237);
+            txtApellidoEmpleado.Name = "txtApellidoEmpleado";
+            txtApellidoEmpleado.Size = new Size(100, 23);
+            txtApellidoEmpleado.TabIndex = 8;
+            // 
+            // txtNombreEmpleado
+            // 
+            txtNombreEmpleado.Location = new Point(88, 207);
+            txtNombreEmpleado.Name = "txtNombreEmpleado";
+            txtNombreEmpleado.Size = new Size(100, 23);
+            txtNombreEmpleado.TabIndex = 7;
+            // 
+            // label20
+            // 
+            label20.AutoSize = true;
+            label20.Location = new Point(18, 259);
+            label20.Name = "label20";
+            label20.Size = new Size(55, 15);
+            label20.TabIndex = 6;
+            label20.Text = "Telefono:";
+            // 
+            // label19
+            // 
+            label19.AutoSize = true;
+            label19.Location = new Point(18, 237);
+            label19.Name = "label19";
+            label19.Size = new Size(54, 15);
+            label19.TabIndex = 5;
+            label19.Text = "Apellido:";
+            // 
+            // label18
+            // 
+            label18.AutoSize = true;
+            label18.Location = new Point(16, 209);
+            label18.Name = "label18";
+            label18.Size = new Size(54, 15);
+            label18.TabIndex = 4;
+            label18.Text = "Nombre:";
+            // 
+            // lblMostrarLista
+            // 
+            lblMostrarLista.AutoSize = true;
+            lblMostrarLista.Location = new Point(15, 116);
+            lblMostrarLista.Name = "lblMostrarLista";
+            lblMostrarLista.Size = new Size(0, 15);
+            lblMostrarLista.TabIndex = 3;
+            // 
+            // button9
+            // 
+            button9.Location = new Point(82, 65);
+            button9.Name = "button9";
+            button9.Size = new Size(100, 23);
+            button9.TabIndex = 2;
+            button9.Text = "Agregar";
+            button9.UseVisualStyleBackColor = true;
+            button9.Click += button9_Click;
+            // 
+            // txtGetLista
+            // 
+            txtGetLista.Location = new Point(82, 25);
+            txtGetLista.Name = "txtGetLista";
+            txtGetLista.Size = new Size(100, 23);
+            txtGetLista.TabIndex = 1;
+            // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.Location = new Point(12, 28);
+            label17.Name = "label17";
+            label17.Size = new Size(54, 15);
+            label17.TabIndex = 0;
+            label17.Text = "Nombre:";
+            // 
+            // button11
+            // 
+            button11.Location = new Point(139, 293);
+            button11.Name = "button11";
+            button11.Size = new Size(65, 23);
+            button11.TabIndex = 12;
+            button11.Text = "Eliminar";
+            button11.UseVisualStyleBackColor = true;
+            button11.Click += button11_Click;
             // 
             // Form1
             // 
@@ -496,6 +646,9 @@
             tabPage1.PerformLayout();
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
+            tabPage2.ResumeLayout(false);
+            groupBox4.ResumeLayout(false);
+            groupBox4.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -542,5 +695,19 @@
         private Label label14;
         private Label lblColorCirc;
         private TabPage tabPage2;
+        private GroupBox groupBox4;
+        private Label lblMostrarLista;
+        private Button button9;
+        private TextBox txtGetLista;
+        private Label label17;
+        private Label lblMostrarListaEmpleados;
+        private Button button10;
+        private TextBox txtTelefonoEmpleado;
+        private TextBox txtApellidoEmpleado;
+        private TextBox txtNombreEmpleado;
+        private Label label20;
+        private Label label19;
+        private Label label18;
+        private Button button11;
     }
 }
