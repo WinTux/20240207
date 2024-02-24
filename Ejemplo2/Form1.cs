@@ -1,4 +1,5 @@
 using Ejemplo2.MisClases;
+using System.Drawing.Text;
 
 namespace Ejemplo2
 {
@@ -157,9 +158,62 @@ namespace Ejemplo2
                 lblMostrarListaEmpleados.Text += listaEmpleados.ElementAt(i) + "\n";
             }
 
-            Empleado x = new Empleado("a","b",1);
+            Empleado x = new Empleado("a", "b", 1);
             Empleado y = x;
             x.nombre = "z";
+        }
+
+        private Stack<string> miPilita = new Stack<string>();
+        private void button12_Click(object sender, EventArgs e)
+        {
+            string elemento = txtGetPila.Text;
+            miPilita.Push(elemento);
+            lblPila.Text = "";
+            txtGetPila.Text = "";
+            Stack<string> pilaAuxiliar = new Stack<string>();
+
+            while (miPilita.Count > 0)
+            {
+                string elementoActual = miPilita.Pop();
+                lblPila.Text += elementoActual + "\n";
+                pilaAuxiliar.Push(elementoActual);
+            }
+            while (pilaAuxiliar.Count > 0)
+                miPilita.Push(pilaAuxiliar.Pop());
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            string elementoEliminado = miPilita.Pop();
+            lblEliminado.Text = $"Se acaba de eliminar:\n {elementoEliminado}";
+            lblPila.Text = "";
+            Stack<string> pilaAuxiliar = new Stack<string>();
+
+            while (miPilita.Count > 0)
+            {
+                string elementoActual = miPilita.Pop();
+                lblPila.Text += elementoActual + "\n";
+                pilaAuxiliar.Push(elementoActual);
+            }
+            while (pilaAuxiliar.Count > 0)
+                miPilita.Push(pilaAuxiliar.Pop());
+
+            string variable = miPilita.Peek();//solo rescata el valor del elemento en la cima de la pila (sin eliminarlo de la pila)
+
+        }
+        private Queue<string> colaPlatos = new Queue<string>();
+        private void button14_Click(object sender, EventArgs e)
+        {
+            colaPlatos.Enqueue(txtCola.Text);
+            lblElementosCola.Text = "";
+            Queue<string> colaAuxiliar = new Queue<string>();
+            while (colaPlatos.Count > 0) {
+                string plato = colaPlatos.Dequeue();
+                lblElementosCola.Text += plato + "\n";
+                colaAuxiliar.Enqueue(plato);
+            }
+            while (colaAuxiliar.Count > 0)
+                colaPlatos.Enqueue(colaAuxiliar.Dequeue());
         }
     }
 }

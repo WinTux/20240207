@@ -69,7 +69,15 @@
             label11 = new Label();
             label10 = new Label();
             tabPage2 = new TabPage();
+            groupBox5 = new GroupBox();
+            lblEliminado = new Label();
+            button13 = new Button();
+            lblPila = new Label();
+            button12 = new Button();
+            txtGetPila = new TextBox();
+            label21 = new Label();
             groupBox4 = new GroupBox();
+            button11 = new Button();
             lblMostrarListaEmpleados = new Label();
             button10 = new Button();
             txtTelefonoEmpleado = new TextBox();
@@ -82,7 +90,13 @@
             button9 = new Button();
             txtGetLista = new TextBox();
             label17 = new Label();
-            button11 = new Button();
+            groupBox6 = new GroupBox();
+            label22 = new Label();
+            txtCola = new TextBox();
+            button14 = new Button();
+            button15 = new Button();
+            lblElementosCola = new Label();
+            lblEliminadoCola = new Label();
             tabControl1.SuspendLayout();
             tab1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -90,7 +104,9 @@
             tabPage1.SuspendLayout();
             groupBox3.SuspendLayout();
             tabPage2.SuspendLayout();
+            groupBox5.SuspendLayout();
             groupBox4.SuspendLayout();
+            groupBox6.SuspendLayout();
             SuspendLayout();
             // 
             // tabControl1
@@ -487,6 +503,8 @@
             // 
             // tabPage2
             // 
+            tabPage2.Controls.Add(groupBox6);
+            tabPage2.Controls.Add(groupBox5);
             tabPage2.Controls.Add(groupBox4);
             tabPage2.Location = new Point(4, 24);
             tabPage2.Name = "tabPage2";
@@ -494,6 +512,73 @@
             tabPage2.TabIndex = 3;
             tabPage2.Text = "Estructuras de datos";
             tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // groupBox5
+            // 
+            groupBox5.Controls.Add(lblEliminado);
+            groupBox5.Controls.Add(button13);
+            groupBox5.Controls.Add(lblPila);
+            groupBox5.Controls.Add(button12);
+            groupBox5.Controls.Add(txtGetPila);
+            groupBox5.Controls.Add(label21);
+            groupBox5.Location = new Point(231, 18);
+            groupBox5.Name = "groupBox5";
+            groupBox5.Size = new Size(197, 387);
+            groupBox5.TabIndex = 1;
+            groupBox5.TabStop = false;
+            groupBox5.Text = "Pilas";
+            // 
+            // lblEliminado
+            // 
+            lblEliminado.AutoSize = true;
+            lblEliminado.Location = new Point(80, 119);
+            lblEliminado.Name = "lblEliminado";
+            lblEliminado.Size = new Size(0, 15);
+            lblEliminado.TabIndex = 5;
+            // 
+            // button13
+            // 
+            button13.Location = new Point(81, 86);
+            button13.Name = "button13";
+            button13.Size = new Size(98, 23);
+            button13.TabIndex = 4;
+            button13.Text = "Eliminar";
+            button13.UseVisualStyleBackColor = true;
+            button13.Click += button13_Click;
+            // 
+            // lblPila
+            // 
+            lblPila.AutoSize = true;
+            lblPila.Location = new Point(15, 94);
+            lblPila.Name = "lblPila";
+            lblPila.Size = new Size(0, 15);
+            lblPila.TabIndex = 3;
+            // 
+            // button12
+            // 
+            button12.Location = new Point(79, 53);
+            button12.Name = "button12";
+            button12.Size = new Size(100, 23);
+            button12.TabIndex = 2;
+            button12.Text = "Agregar";
+            button12.UseVisualStyleBackColor = true;
+            button12.Click += button12_Click;
+            // 
+            // txtGetPila
+            // 
+            txtGetPila.Location = new Point(79, 18);
+            txtGetPila.Name = "txtGetPila";
+            txtGetPila.Size = new Size(100, 23);
+            txtGetPila.TabIndex = 1;
+            // 
+            // label21
+            // 
+            label21.AutoSize = true;
+            label21.Location = new Point(10, 23);
+            label21.Name = "label21";
+            label21.Size = new Size(63, 15);
+            label21.TabIndex = 0;
+            label21.Text = "Lenguajes:";
             // 
             // groupBox4
             // 
@@ -516,6 +601,16 @@
             groupBox4.TabIndex = 0;
             groupBox4.TabStop = false;
             groupBox4.Text = "Listas";
+            // 
+            // button11
+            // 
+            button11.Location = new Point(139, 293);
+            button11.Name = "button11";
+            button11.Size = new Size(65, 23);
+            button11.TabIndex = 12;
+            button11.Text = "Eliminar";
+            button11.UseVisualStyleBackColor = true;
+            button11.Click += button11_Click;
             // 
             // lblMostrarListaEmpleados
             // 
@@ -618,15 +713,71 @@
             label17.TabIndex = 0;
             label17.Text = "Nombre:";
             // 
-            // button11
+            // groupBox6
             // 
-            button11.Location = new Point(139, 293);
-            button11.Name = "button11";
-            button11.Size = new Size(65, 23);
-            button11.TabIndex = 12;
-            button11.Text = "Eliminar";
-            button11.UseVisualStyleBackColor = true;
-            button11.Click += button11_Click;
+            groupBox6.Controls.Add(lblEliminadoCola);
+            groupBox6.Controls.Add(lblElementosCola);
+            groupBox6.Controls.Add(button15);
+            groupBox6.Controls.Add(button14);
+            groupBox6.Controls.Add(txtCola);
+            groupBox6.Controls.Add(label22);
+            groupBox6.Location = new Point(437, 27);
+            groupBox6.Name = "groupBox6";
+            groupBox6.Size = new Size(180, 378);
+            groupBox6.TabIndex = 2;
+            groupBox6.TabStop = false;
+            groupBox6.Text = "Colas";
+            // 
+            // label22
+            // 
+            label22.AutoSize = true;
+            label22.Location = new Point(10, 29);
+            label22.Name = "label22";
+            label22.Size = new Size(42, 15);
+            label22.TabIndex = 0;
+            label22.Text = "Platos:";
+            // 
+            // txtCola
+            // 
+            txtCola.Location = new Point(62, 27);
+            txtCola.Name = "txtCola";
+            txtCola.Size = new Size(100, 23);
+            txtCola.TabIndex = 1;
+            // 
+            // button14
+            // 
+            button14.Location = new Point(61, 60);
+            button14.Name = "button14";
+            button14.Size = new Size(75, 23);
+            button14.TabIndex = 2;
+            button14.Text = "Agergar";
+            button14.UseVisualStyleBackColor = true;
+            button14.Click += button14_Click;
+            // 
+            // button15
+            // 
+            button15.Location = new Point(62, 90);
+            button15.Name = "button15";
+            button15.Size = new Size(75, 23);
+            button15.TabIndex = 3;
+            button15.Text = "Eliminar";
+            button15.UseVisualStyleBackColor = true;
+            // 
+            // lblElementosCola
+            // 
+            lblElementosCola.AutoSize = true;
+            lblElementosCola.Location = new Point(10, 172);
+            lblElementosCola.Name = "lblElementosCola";
+            lblElementosCola.Size = new Size(0, 15);
+            lblElementosCola.TabIndex = 4;
+            // 
+            // lblEliminadoCola
+            // 
+            lblEliminadoCola.AutoSize = true;
+            lblEliminadoCola.Location = new Point(63, 117);
+            lblEliminadoCola.Name = "lblEliminadoCola";
+            lblEliminadoCola.Size = new Size(0, 15);
+            lblEliminadoCola.TabIndex = 5;
             // 
             // Form1
             // 
@@ -647,8 +798,12 @@
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
             tabPage2.ResumeLayout(false);
+            groupBox5.ResumeLayout(false);
+            groupBox5.PerformLayout();
             groupBox4.ResumeLayout(false);
             groupBox4.PerformLayout();
+            groupBox6.ResumeLayout(false);
+            groupBox6.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -709,5 +864,19 @@
         private Label label19;
         private Label label18;
         private Button button11;
+        private GroupBox groupBox5;
+        private Button button12;
+        private TextBox txtGetPila;
+        private Label label21;
+        private Label lblPila;
+        private Label lblEliminado;
+        private Button button13;
+        private GroupBox groupBox6;
+        private Label lblEliminadoCola;
+        private Label lblElementosCola;
+        private Button button15;
+        private Button button14;
+        private TextBox txtCola;
+        private Label label22;
     }
 }
