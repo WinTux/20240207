@@ -206,8 +206,26 @@ namespace Ejemplo2
         {
             colaPlatos.Enqueue(txtCola.Text);
             lblElementosCola.Text = "";
+            txtCola.Text = "";
             Queue<string> colaAuxiliar = new Queue<string>();
-            while (colaPlatos.Count > 0) {
+            while (colaPlatos.Count > 0)
+            {
+                string plato = colaPlatos.Dequeue();
+                lblElementosCola.Text += plato + "\n";
+                colaAuxiliar.Enqueue(plato);
+            }
+            while (colaAuxiliar.Count > 0)
+                colaPlatos.Enqueue(colaAuxiliar.Dequeue());
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            colaPlatos.Dequeue();
+
+            lblElementosCola.Text = "";
+            Queue<string> colaAuxiliar = new Queue<string>();
+            while (colaPlatos.Count > 0)
+            {
                 string plato = colaPlatos.Dequeue();
                 lblElementosCola.Text += plato + "\n";
                 colaAuxiliar.Enqueue(plato);
