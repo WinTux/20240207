@@ -1,4 +1,5 @@
 using Ejemplo2.MisClases;
+using Ejemplo2.Models;
 using System.Drawing.Text;
 
 namespace Ejemplo2
@@ -232,6 +233,17 @@ namespace Ejemplo2
             }
             while (colaAuxiliar.Count > 0)
                 colaPlatos.Enqueue(colaAuxiliar.Dequeue());
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            var contexto = new LibreriaDbContext();
+            var libros = contexto.Libros.ToList();
+            lblRegistrosLibro.Text = "";
+            foreach ( var libro in libros )
+            {
+                lblRegistrosLibro.Text += $"Titulo: {libro.titulo}, Autor: {libro.autor}\n";
+            }
         }
     }
 }

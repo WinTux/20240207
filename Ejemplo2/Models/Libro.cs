@@ -12,10 +12,10 @@ namespace Ejemplo2.Models
     public class Libro
     {
         [Key]
-        int id { get; set; }
+        public int id { get; set; }
         [Column("title")]
-        string titulo { get; set; }
+        public string? titulo { get; set; }
         [Required]
-        string? autor { get; set; }
+        public string autor { get; set; }
     }
 }

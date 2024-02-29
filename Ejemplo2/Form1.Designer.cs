@@ -97,6 +97,9 @@
             button9 = new Button();
             txtGetLista = new TextBox();
             label17 = new Label();
+            tabPage3 = new TabPage();
+            lblRegistrosLibro = new Label();
+            button16 = new Button();
             tabControl1.SuspendLayout();
             tab1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -107,6 +110,7 @@
             groupBox6.SuspendLayout();
             groupBox5.SuspendLayout();
             groupBox4.SuspendLayout();
+            tabPage3.SuspendLayout();
             SuspendLayout();
             // 
             // tabControl1
@@ -114,6 +118,7 @@
             tabControl1.Controls.Add(tab1);
             tabControl1.Controls.Add(tabPage1);
             tabControl1.Controls.Add(tabPage2);
+            tabControl1.Controls.Add(tabPage3);
             tabControl1.Location = new Point(3, 1);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
@@ -780,6 +785,35 @@
             label17.TabIndex = 0;
             label17.Text = "Nombre:";
             // 
+            // tabPage3
+            // 
+            tabPage3.Controls.Add(button16);
+            tabPage3.Controls.Add(lblRegistrosLibro);
+            tabPage3.Location = new Point(4, 24);
+            tabPage3.Name = "tabPage3";
+            tabPage3.Size = new Size(623, 419);
+            tabPage3.TabIndex = 4;
+            tabPage3.Text = "EntityFramework";
+            tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // lblRegistrosLibro
+            // 
+            lblRegistrosLibro.AutoSize = true;
+            lblRegistrosLibro.Location = new Point(44, 143);
+            lblRegistrosLibro.Name = "lblRegistrosLibro";
+            lblRegistrosLibro.Size = new Size(0, 15);
+            lblRegistrosLibro.TabIndex = 0;
+            // 
+            // button16
+            // 
+            button16.Location = new Point(59, 38);
+            button16.Name = "button16";
+            button16.Size = new Size(116, 23);
+            button16.TabIndex = 1;
+            button16.Text = "Conectar a DDBB";
+            button16.UseVisualStyleBackColor = true;
+            button16.Click += button16_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -805,6 +839,8 @@
             groupBox5.PerformLayout();
             groupBox4.ResumeLayout(false);
             groupBox4.PerformLayout();
+            tabPage3.ResumeLayout(false);
+            tabPage3.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -879,5 +915,8 @@
         private Button button14;
         private TextBox txtCola;
         private Label label22;
+        private TabPage tabPage3;
+        private Label lblRegistrosLibro;
+        private Button button16;
     }
 }
